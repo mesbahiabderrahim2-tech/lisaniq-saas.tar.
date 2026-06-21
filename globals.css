@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ── LisanIQ Design Tokens ────────────────────────────── */
+    --surface-0: #070b14;
+    --surface-1: #0c1120;
+    --surface-2: #111827;
+    --surface-3: #161e30;
+    --surface-4: #1c2640;
+
+    --line-1: #1a2540;
+    --line-2: #243050;
+    --line-3: #2e3d62;
+
+    --sapphire:     #3d6fe8;
+    --sapphire-dim: #2a52b8;
+    --gold:         #c9a84c;
+    --platinum:     #e8edf5;
+    --silver:       #8899b8;
+    --slate:        #4a5878;
+
+    --positive: #1fbb8a;
+    --caution:  #d4922a;
+    --critical: #dc4b4b;
+    --info:     #4d8ef0;
+
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-data:    'IBM Plex Mono', 'Courier New', monospace;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-inter, 'Inter', system-ui, sans-serif);
+    background-color: var(--surface-0);
+    color: var(--platinum);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::-webkit-scrollbar       { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: var(--surface-0); }
+  ::-webkit-scrollbar-thumb { background: var(--line-3); border-radius: 2px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .font-data    { font-family: var(--font-data); }
+}
